@@ -4,7 +4,7 @@ Feature: Store the InferenceResult Value Object containing the results of the in
 
   Background:
     Given I have imported the InferenceResult class from the thunder.inference module
-    And I have imported the InferenceRepository class from the pyro_thunder repositories
+    And I have imported the InferenceRepository class from the thunder repositories
     And I have an instance of the chosen InferenceEngine
 
   Scenario: Store the InferenceResult Value Object containing the results of the inference

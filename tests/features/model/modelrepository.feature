@@ -3,7 +3,7 @@ Feature: Store the created model in the ModelRepository
   so that I can easily access and manage the model for probabilistic inference with Pyro-Thunder.
 
   Background:
-    Given I have imported the ModelSpecification and ModelRepository classes from the pyro_thunder.model module
+    Given I have imported the ModelSpecification and ModelRepository classes from the thunder.model module
     And I have a ModelSpecification instance with a model definition
 
   Scenario: Store the model in the ModelRepository
