@@ -141,7 +141,7 @@ dependencies = [
 ]
 
 [project.scripts]
-thunder = "thunder.cli:thunder"
+thunder = "thunder.cli:main"
 
 
 [project.urls]

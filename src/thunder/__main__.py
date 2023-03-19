@@ -1,6 +1,6 @@
 import sys
 
 if __name__ == "__main__":
-    from thunder.cli import thunder
+    from thunder.cli import main
 
-    sys.exit(thunder())
+    sys.exit(main())
