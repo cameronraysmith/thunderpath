@@ -4,7 +4,7 @@ Feature: Execute the chosen InferenceEngine
 
   Background:
     Given I have imported the InferenceEngine, VIEngine, and MCEngine classes from the thunder.inference module
-    And I have imported the ModelRepository and GuideRepository classes from the pyro_thunder repositories
+    And I have imported the ModelRepository and GuideRepository classes from the thunder repositories
     And I have configured the chosen InferenceEngine with the ModelRepository and GuideRepository instances
 
   Scenario: Execute the chosen InferenceEngine

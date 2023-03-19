@@ -3,7 +3,7 @@ Feature: Evaluate the model using the Metrics Domain Service and store the resul
   so that I can easily access and analyze the performance of the model.
 
   Background:
-    Given I have imported the Metrics class from the pyro_thunder.utils.metrics module
+    Given I have imported the Metrics class from the thunder.utils.metrics module
     And I have the ModelRepository, GuideRepository, and InferenceResult objects
 
   Scenario: Evaluate the model and store the results in MetricValues
