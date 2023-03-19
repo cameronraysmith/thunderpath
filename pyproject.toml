@@ -68,6 +68,8 @@ branch = true
 parallel = true
 omit = [
   "src/thunder/__about__.py",
+  "src/thunder/__main__.py",
+  "tests/conftest.py",
 ]
 
 [tool.coverage.paths]
@@ -83,6 +85,9 @@ exclude_lines = [
 
 
 [tool.hatch]
+
+[tool.hatch.build.targets.wheel]
+packages = ['src/thunder']
 
 [tool.hatch.metadata]
 allow-direct-references = true
@@ -125,7 +130,7 @@ requires = ["hatchling", "hatch-regex-commit"]
 build-backend = "hatchling.build"
 
 [project]
-name = "thunder"
+name = "pyro-thunder"
 authors = [
   { name = "pyro-thunder", email = "cameron.ray.smith@gmail.com" }
 ]
