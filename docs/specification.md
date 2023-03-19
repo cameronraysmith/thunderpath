@@ -4,6 +4,8 @@
 
 - [pyro-thunder](#pyro-thunder)
   - [Introduction](#introduction)
+    - [Motivation](#motivation)
+    - [Hypothetical usage example](#hypothetical-usage-example)
   - [Functional Requirements](#functional-requirements)
     - [User](#user)
     - [Developer](#developer)
@@ -17,8 +19,9 @@
   - [Deployment and Maintenance](#deployment-and-maintenance)
 
 ## Introduction
+### Motivation
 
-`pyro-thunder` (this name is an analogy to the library formerly known as pytorch-lightning) is a python library designed to provide a flexible and easy-to-use platform for performing probabilistic inference and iterating Box's loop using probabilistic programming with pyro. Built on top of the powerful pyro family of libraries, pyro-thunder aims to simplify the process of defining probabilistic models, setting up inference engines, and evaluating the results. For a quick summary of the proposed usage workflow, skip to the [state transformation workflow](#state-transformation-workflow) section.
+`pyro-thunder` (this name is an analogy to the library formerly known as pytorch-lightning) is a python library designed to provide a flexible and easy-to-use platform for performing probabilistic inference and iterating Box's loop using probabilistic programming with pyro. Built on top of the powerful pyro family of libraries, pyro-thunder aims to simplify the process of defining probabilistic models, setting up inference engines, and evaluating the results. For a quick summary of the proposed usage workflow, skip to the [hypothetical usage example](#hypothetical-usage-example) based on the [state transformation workflow](#state-transformation-workflow) section.
 
 Box's loop is an iterative process that helps scientists and researchers refine their models and understanding of the underlying phenomena by constantly comparing model predictions to observed data. This loop is an essential component of reproducible science, as it encourages the continuous improvement of models and assumptions based on new data, analyses, and insights. By facilitating the iteration of Box's loop, pyro-thunder enables researchers to create more accurate and robust models, supporting the opportunity to achieve better scientific outcomes.
 
@@ -29,6 +32,114 @@ The architecture of pyro-thunder intends to loosely adhere to the principles of 
 * Maintainability: The modular structure promotes a clean separation of concerns, making the codebase more manageable and less prone to errors.
 
 pyro-thunder aims to become a powerful and flexible library for probabilistic modeling with the pyro family. It intends to streamline the process of iterating Box's loop and foster reproducible science.
+
+### Hypothetical usage example
+
+Consider a scenario where a user has a data set consisting of samples from an unknown univariate distribution. The user will attempt to fit the parameters of both a Normal distribution model and a Cauchy distribution model to this data set using both variational inference and hamiltonian monte carlo. The user will then seek to summarize and compare the inference output for each model to this data set using diagnostic plots, evaluated metrics, and model criticism. Depending on the results, the user may return to the initial step and consider alternative models. This would essentially complete a single round of Box's loop.
+
+The following python code is intended to represent a hypothetical usage example in the above scenario using all of the components of the [state transformation workflow](#state-transformation-workflow).
+
+```python
+from thunder import (
+    Config,
+    DataLoader,
+    ModelSpecification,
+    GuideSpecification,
+    InferenceEngineFactory,
+    Diagnostics,
+    Metrics,
+    ModelCriticism,
+)
+
+# Configure the model comparison workflow
+config = Config(
+    data_loader={
+        "data_file": "unknown_samples.csv",
+    },
+    models=[
+        {
+            "name": "normal",
+            "type": "normal",
+            "guide": "auto",
+            "inference_engines": ["VI", "HMC"],
+        },
+        {
+            "name": "cauchy",
+            "type": "cauchy",
+            "guide": "auto",
+            "inference_engines": ["VI", "HMC"],
+        },
+    ],
+    diagnostics={
+        "plot_types": ["trace", "density", "autocorrelation"],
+    },
+    metrics={
+        "metric_types": ["mean", "median", "std"],
+    },
+    model_criticism={
+        "comparison_methods": ["posterior_predictive_check", "bayes_factor"],
+    },
+)
+
+# Load data
+data_loader = DataLoader.from_config(config.data_loader)
+data = data_loader.load_data()
+data_repository = data_loader.store_data(data)
+
+# Define models and guides
+model_specifications = []
+for model_config in config.models:
+    model_specification = ModelSpecification.from_config(model_config)
+    guide_specification = GuideSpecification.from_config(model_config)
+    model_repository = model_specification.store_model()
+    guide_repository = guide_specification.store_guide()
+    model_specifications.append(
+        (model_specification, guide_specification, model_repository, guide_repository)
+    )
+
+# Perform Inference
+inference_results = []
+for model_spec, guide_spec, model_repo, guide_repo in model_specifications:
+    for engine_type in model_spec.inference_engines:
+        inference_engine = InferenceEngineFactory.create(
+            engine_type, model_repo, guide_repo
+        )
+        inference_engine.configure()
+        inference_result = inference_engine.run_inference()
+        inference_results.append((model_spec.name, engine_type, inference_result))
+
+# Generate summaries and diagnostics
+diagnostics = Diagnostics.from_config(config.diagnostics)
+for model_name, engine_type, inference_result in inference_results:
+    diagnostic_plots = diagnostics.generate_plots(inference_result)
+    diagnostics.save_plots(diagnostic_plots, f"{model_name}_{engine_type}_diagnostics")
+
+# Evaluate metrics
+metrics = Metrics.from_config(config.metrics)
+for model_name, engine_type, inference_result in inference_results:
+    metric_values = metrics.evaluate(inference_result)
+    metrics.save_values(metric_values, f"{model_name}_{engine_type}_metrics")
+
+# Compare models
+model_criticism = ModelCriticism.from_config(config.model_criticism)
+comparison_results = []
+for i, (model_name1, engine_type1, inference_result1) in enumerate(inference_results):
+    for model_name2, engine_type2, inference_result2 in inference_results[i + 1 :]:
+        comparison_result = model_criticism.compare(
+            inference_result1, inference_result2
+        )
+        comparison_results.append(
+            (
+                f"{model_name1}_{engine_type1}",
+                f"{model_name2}_{engine_type2}",
+                comparison_result,
+            )
+        )
+        model_criticism.save_result(
+            comparison_result,
+            f"{model_name1}_{engine_type1}_vs_{model_name2}_{engine_type2}_comparison",
+        )
+```
 
 
 ## Functional Requirements
