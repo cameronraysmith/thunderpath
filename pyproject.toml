@@ -109,12 +109,12 @@ test = "pytest -rA"
 test-cov-xml = "pytest -rA --cov-report=xml"
 lint = [
   "black .",
-  "ruff --fix src tests",
+  "ruff --fix .",
   "mypy src/thunder/",
 ]
 lint-check = [
   "black --check .",
-  "ruff src tests",
+  "ruff .",
   "mypy src/thunder/",
 ]
 docs-serve = "mkdocs serve"
