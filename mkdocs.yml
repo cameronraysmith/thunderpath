@@ -1,0 +1,59 @@
+site_name: pyro-thunder
+site_description: Probabilistic modeling framework to define, experiment with, and critique models in service of iterating through Box's loop.
+
+repo_url: https://github.com/cameronraysmith/pyro-thunder
+repo_name: cameronraysmith/pyro-thunder
+
+theme:
+    name: material
+    icon:
+        logo: material/library
+    palette:
+        # Palette toggle for light mode
+        - media: "(prefers-color-scheme: light)"
+          scheme: default
+          primary: deep orange
+          accent: deep purple
+          toggle:
+            icon: material/brightness-7
+            name: Switch to dark mode
+
+        # Palette toggle for dark mode
+        - media: "(prefers-color-scheme: dark)"
+          scheme: slate
+          primary: deep orange
+          accent: deep purple
+          toggle:
+            icon: material/brightness-4
+            name: Switch to light mode
+
+markdown_extensions:
+    - toc:
+        permalink: true
+    - pymdownx.highlight:
+        anchor_linenums: true
+    - pymdownx.tasklist:
+        custom_checkbox: true
+    - pymdownx.inlinehilite
+    - pymdownx.snippets
+    - pymdownx.superfences
+
+plugins:
+    - search
+    - mkdocstrings:
+        handlers:
+            python:
+                import:
+                    - https://docs.python.org/3.10/objects.inv
+                options:
+                    docstring_style: google
+
+watch:
+    - docs
+    - src/thunder
+
+nav:
+    - About: index.md
+    - Specification: specification.md
+    - Reference:
+        - thunder: reference/thunder.md

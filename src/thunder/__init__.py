@@ -1,0 +1,22 @@
+# SPDX-FileCopyrightText: 2023-present Cameron Smith
+#
+# SPDX-License-Identifier: AGPL-3.0-only
+
+
+def add(a: int, b: int) -> int:
+    """
+    Add two integers.
+
+    Args:
+        a:
+            The first operand.
+        b:
+            The second operand.
+
+    Examples:
+        Add two integers
+
+            r = add(2, 3)
+            print(r)  # 5
+    """
+    return a + b
