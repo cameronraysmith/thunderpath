@@ -36,16 +36,16 @@ jobs:
     - name: Detect and tag new version
       id: check-version
       if: steps.check-parent-commit.outputs.sha
-      uses: salsify/action-detect-and-tag-new-version@v2.0.1
+      uses: salsify/action-detect-and-tag-new-version@v2.0.3
       with:
         version-command: |
-          bash -o pipefail -c "hatch version"
+          bash -o pipefail -c "hatch version | awk '{ print \$1 }'"
 
     - name: Bump version for developmental release
       if: "! steps.check-version.outputs.tag"
       run: |
         hatch version patch &&
-        version=$(hatch version) &&
+        version=$(hatch version | awk '{ print $1 }') &&
         hatch version $version.dev.$(date +%s)
 
     - name: Build package
