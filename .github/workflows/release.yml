@@ -43,13 +43,13 @@ jobs:
       uses: salsify/action-detect-and-tag-new-version@v2.0.3
       with:
         version-command: |
-          bash -o pipefail -c "hatch version"
+          bash -o pipefail -c "hatch -q version"
 
     - name: Bump version for developmental release
       if: "! steps.check-version.outputs.tag"
       run: |
         hatch version patch &&
-        version=$(hatch version) &&
+        version=$(hatch -q version) &&
         hatch version $version.dev.$(date +%s)
 
     - name: Build package
