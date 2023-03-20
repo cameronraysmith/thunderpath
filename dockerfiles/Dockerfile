@@ -1,8 +1,9 @@
 # syntax=docker/dockerfile:1
-FROM ghcr.io/iterative/cml:0-dvc2-base1-gpu
+FROM condaforge/mambaforge:22.11.1-4
+WORKDIR /pyro-thunder
+COPY . .
 
-LABEL maintainer="pyro-thunder team"
-WORKDIR ${CML_RUNNER_PATH}
-COPY . pyro-thunder/
-RUN cd pyro-thunder && \
-    pip install -e .
+RUN mamba init
+RUN mamba info && \
+    mamba install python=3.10 --yes
+RUN pip install -e .
