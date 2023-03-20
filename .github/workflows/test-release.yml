@@ -72,7 +72,7 @@ jobs:
         version=$(hatch -q version) &&
         echo $version &&
         pip install \
-        --index-url https://test.pypi.org/simple/ \                                                                                         ─╯
+        --index-url https://test.pypi.org/simple/ \
         --extra-index-url https://pypi.org/simple/ \
         pyro-thunder==$version &&
         pip list | grep thunder
