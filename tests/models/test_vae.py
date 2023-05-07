@@ -67,3 +67,6 @@ def test_configure_optimizers(vae):
     assert isinstance(optimizer, pyro.optim.PyroOptim)
 
 
+def test_visualizations(vae):
+    plot_loss(vae, num_epochs=100, output_file="tests/output/loss_plot.pdf")
+    plot_latent_space(vae, output_file="tests/output/latent_space_plot.pdf")
