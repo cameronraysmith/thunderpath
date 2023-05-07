@@ -58,6 +58,9 @@ ban-relative-imports = "all"
 # Tests can use magic values, assertions, and relative imports
 "tests/**/*" = ["PLR2004", "S101", "TID252"]
 
+[tool.mypy]
+ignore_missing_imports = true
+
 [tool.pytest.ini_options]
 addopts = "--cov=src/thunder/ --cov-report=term-missing"
 asyncio_mode = "strict"
@@ -143,6 +146,10 @@ classifiers = [
 requires-python = ">=3.10"
 dependencies = [
   "click",
+  "pyro-ppl",
+  "torch",
+  "lightning",
+  "matplotlib",
 ]
 
 [project.scripts]
