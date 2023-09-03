@@ -58,7 +58,7 @@ jobs:
         repository-url: https://test.pypi.org/legacy/
 
     - name: Publish the release notes
-      uses: release-drafter/release-drafter@v5.23.0
+      uses: release-drafter/release-drafter@65c5fb495d1e69aa8c08a3317bc44ff8aabe9772 # v5.24.0
       with:
         publish: false
         prerelease: true
