@@ -1,6 +1,6 @@
 import pytest
 
-from thunder import add
+from thunderpath import add
 
 
 @pytest.mark.parametrize(

@@ -1,9 +1,9 @@
 Feature: Use the ModelSpecification Entity to define the probabilistic model
   As a researcher, I want to use the ModelSpecification entity to define the probabilistic model
-  so that I can build custom models for probabilistic inference with Pyro-Thunder.
+  so that I can build custom models for probabilistic inference with thunderpath.
 
   Background:
-    Given I have imported the ModelSpecification class from the thunder.model module
+    Given I have imported the ModelSpecification class from the thunderpath.model module
 
   Scenario: Define a probabilistic model using Pyro primitives
     Given I have a model definition function using Pyro primitives

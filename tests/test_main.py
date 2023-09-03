@@ -2,7 +2,7 @@
 import pytest
 from click.testing import CliRunner
 
-from thunder.cli import main
+from thunderpath.cli import main
 
 
 @pytest.fixture

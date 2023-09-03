@@ -3,7 +3,7 @@ Feature: Raise a DiagnosticPlotsGeneratedEvent when diagnostic plots are success
   so that other components can respond to the completion of the diagnostic plots generation process.
 
   Background:
-    Given I have imported the DiagnosticPlotsGeneratedEvent class from the thunder.utils.diagnostics module
+    Given I have imported the DiagnosticPlotsGeneratedEvent class from the thunderpath.utils.diagnostics module
     And I have the DiagnosticPlots Value Object from the Diagnostics Domain Service
 
   Scenario: Raise a DiagnosticPlotsGeneratedEvent when diagnostic plots are successfully created

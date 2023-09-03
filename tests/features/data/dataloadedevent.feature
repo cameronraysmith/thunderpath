@@ -1,9 +1,9 @@
 Feature: Raise a DataLoadedEvent when data is successfully loaded
   As a researcher, I want to raise a DataLoadedEvent when data is successfully loaded
-  so that I can keep track of the data loading process and trigger subsequent actions in the Pyro-Thunder workflow.
+  so that I can keep track of the data loading process and trigger subsequent actions in the thunderpath workflow.
 
   Background:
-    Given I have imported the DataLoader, DataRepository, and DataLoadedEvent classes from the thunder.data module
+    Given I have imported the DataLoader, DataRepository, and DataLoadedEvent classes from the thunderpath.data module
     And I have a DataLoader instance with data loaded
     And I have a DataRepository instance
 

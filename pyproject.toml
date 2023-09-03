@@ -49,7 +49,7 @@ unfixable = [
 ]
 
 [tool.ruff.isort]
-known-first-party = ["thunder"]
+known-first-party = ["thunderpath"]
 
 [tool.ruff.flake8-tidy-imports]
 ban-relative-imports = "all"
@@ -59,22 +59,22 @@ ban-relative-imports = "all"
 "tests/**/*" = ["PLR2004", "S101", "TID252"]
 
 [tool.pytest.ini_options]
-addopts = "--cov=src/thunder/ --cov-report=term-missing"
+addopts = "--cov=src/thunderpath/ --cov-report=term-missing"
 asyncio_mode = "strict"
 
 [tool.coverage.run]
-source_pkgs = ["thunder", "tests"]
+source_pkgs = ["thunderpath", "tests"]
 branch = true
 parallel = true
 omit = [
-  "src/thunder/__about__.py",
-  "src/thunder/__main__.py",
+  "src/thunderpath/__about__.py",
+  "src/thunderpath/__main__.py",
   "tests/conftest.py",
 ]
 
 [tool.coverage.paths]
-thunder = ["src/thunder", "*/thunder/src/thunder"]
-tests = ["tests", "*/thunder/tests"]
+thunderpath = ["src/thunderpath", "*/thunderpath/src/thunderpath"]
+tests = ["tests", "*/thunderpath/tests"]
 
 [tool.coverage.report]
 exclude_lines = [
@@ -87,13 +87,13 @@ exclude_lines = [
 [tool.hatch]
 
 [tool.hatch.build.targets.wheel]
-packages = ['src/thunder']
+packages = ['src/thunderpath']
 
 [tool.hatch.metadata]
 allow-direct-references = true
 
 [tool.hatch.version]
-path = "src/thunder/__about__.py"
+path = "src/thunderpath/__about__.py"
 
 [tool.hatch.envs.default]
 python = "3.10"
@@ -115,12 +115,12 @@ test-cov-xml = "pytest -rA --cov-report=xml"
 lint = [
   "black .",
   "ruff --fix .",
-  "mypy src/thunder/",
+  "mypy src/thunderpath/",
 ]
 lint-check = [
   "black --check .",
   "ruff .",
-  "mypy src/thunder/",
+  "mypy src/thunderpath/",
 ]
 docs-serve = "mkdocs serve"
 docs-build = "mkdocs build"
@@ -130,9 +130,9 @@ requires = ["hatchling", "hatch-regex-commit"]
 build-backend = "hatchling.build"
 
 [project]
-name = "pyro-thunder"
+name = "thunderpath"
 authors = [
-  { name = "pyro-thunder", email = "cameron.ray.smith@gmail.com" }
+  { name = "thunderpath", email = "cameron.ray.smith@gmail.com" }
 ]
 description = "Probabilistic modeling framework to define, experiment with, and critique models in service of iterating through Box's loop."
 readme = "README.md"
@@ -146,10 +146,10 @@ dependencies = [
 ]
 
 [project.scripts]
-thunder = "thunder.cli:main"
+thunderpath = "thunderpath.cli:main"
 
 
 [project.urls]
-Documentation = "https://cameronraysmith.github.io/pyro-thunder/"
-Issues = "https://github.com/cameronraysmith/pyro-thunder/issues"
-Source = "https://github.com/cameronraysmith/pyro-thunder"
+Documentation = "https://cameronraysmith.github.io/thunderpath/"
+Issues = "https://github.com/cameronraysmith/thunderpath/issues"
+Source = "https://github.com/cameronraysmith/thunderpath"

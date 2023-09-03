@@ -1,6 +1,6 @@
 # syntax=docker/dockerfile:1
 FROM condaforge/mambaforge:22.11.1-4
-WORKDIR /pyro-thunder
+WORKDIR /thunderpath
 COPY . .
 
 RUN mamba init
