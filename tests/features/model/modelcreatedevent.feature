@@ -3,7 +3,7 @@ Feature: Raise a ModelCreatedEvent when the model is successfully defined
   so that I can keep track of the model creation process and trigger subsequent actions in the thunderpath workflow.
 
   Background:
-    Given I have imported the ModelSpecification, ModelRepository, and ModelCreatedEvent classes from the thunder.model module
+    Given I have imported the ModelSpecification, ModelRepository, and ModelCreatedEvent classes from the thunderpath.model module
     And I have a ModelSpecification instance with a model definition
     And I have a ModelRepository instance
 

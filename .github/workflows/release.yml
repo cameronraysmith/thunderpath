@@ -61,4 +61,4 @@ jobs:
         version=$(hatch -q version) &&
         pip install \
         thunderpath==$version &&
-        pip list | grep thunder
+        pip list | grep thunderpath

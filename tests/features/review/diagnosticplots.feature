@@ -3,7 +3,7 @@ Feature: Use the Diagnostics Domain Service to create diagnostic plots with Diag
   so that I can visualize and analyze the results of the inference.
 
   Background:
-    Given I have imported the Diagnostics class from the thunder.review.diagnostics module
+    Given I have imported the Diagnostics class from the thunderpath.review.diagnostics module
     And I have the InferenceResult Value Object from the completed inference
 
   Scenario: Use the Diagnostics Domain Service to create diagnostic plots with DiagnosticPlots Value Object

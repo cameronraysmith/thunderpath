@@ -3,8 +3,8 @@ Feature: Raise ModelComparisonCompletedEvent when model comparison is successful
   so that I can be notified when the model comparison process is completed.
 
   Background:
-    Given I have imported the ModelCriticism class from the thunder.model_criticism module
-    And I have imported the ModelComparisonCompletedEvent class from the thunder.model_criticism.events module
+    Given I have imported the ModelCriticism class from the thunderpath.model_criticism module
+    And I have imported the ModelComparisonCompletedEvent class from the thunderpath.model_criticism.events module
     And I have multiple ModelRepository, GuideRepository, and InferenceResult objects for different models
 
   Scenario: Raise ModelComparisonCompletedEvent after successful model comparison

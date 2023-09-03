@@ -3,7 +3,7 @@ Feature: Use the DataLoader Entity to load data from a specified source
   so that I can easily prepare data for probabilistic inference with thunderpath.
 
   Background:
-    Given I have imported the DataLoader class from the thunder.data module
+    Given I have imported the DataLoader class from the thunderpath.data module
 
   Scenario: Load data from a CSV file
     Given I have a CSV file with data at "data.csv"

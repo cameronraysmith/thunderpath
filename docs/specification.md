@@ -40,7 +40,7 @@ Consider a scenario where a user has a data set consisting of samples from an un
 The following python code is intended to represent a hypothetical usage example in the above scenario using all of the components of the [state transformation workflow](#state-transformation-workflow).
 
 ```python
-from thunder import (
+from thunderpath import (
     Config,
     DataLoader,
     ModelSpecification,
@@ -258,7 +258,7 @@ Please see the [features folder](https://github.com/cameronraysmith/thunderpath/
 ```shell
 thunderpath/
 ├── src/
-|   └── thunder/
+|   └── thunderpath/
 |       ├── data/
 |       |   ├── __init__.py
 |       |   ├── data_loader.py

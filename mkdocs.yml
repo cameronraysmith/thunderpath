@@ -50,10 +50,10 @@ plugins:
 
 watch:
     - docs
-    - src/thunder
+    - src/thunderpath
 
 nav:
     - About: index.md
     - Specification: specification.md
     - Reference:
-        - thunder: reference/thunder.md
+        - thunderpath: reference/thunderpath.md

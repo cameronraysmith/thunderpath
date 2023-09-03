@@ -3,7 +3,7 @@ Feature: Store the loaded data in the DataRepository
   so that I can easily access and manage the data for probabilistic inference with thunderpath.
 
   Background:
-    Given I have imported the DataLoader and DataRepository classes from the thunder.data module
+    Given I have imported the DataLoader and DataRepository classes from the thunderpath.data module
     And I have a DataLoader instance with data loaded
 
   Scenario: Store data in the DataRepository

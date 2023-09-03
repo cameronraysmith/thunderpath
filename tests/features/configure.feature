@@ -3,7 +3,7 @@ Feature: Configure the entire process using the Config Entity
   so that I can manage settings for data loading, model and guide definition, inference, and diagnostics generation in one place.
 
   Background:
-    Given I have imported the Config class from the thunder.config module
+    Given I have imported the Config class from the thunderpath.config module
     And I have a configuration file with all necessary settings
 
   Scenario: Load and apply configuration settings for the entire process

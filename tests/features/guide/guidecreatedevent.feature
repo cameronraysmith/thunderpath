@@ -3,7 +3,7 @@ Feature: Raise a GuideCreatedEvent when the guide is successfully defined
   so that I can track the progress of the thunderpath workflow and respond to the event if needed.
 
   Background:
-    Given I have imported the GuideSpecification, GuideRepository, and GuideCreatedEvent classes from the thunder.guide module
+    Given I have imported the GuideSpecification, GuideRepository, and GuideCreatedEvent classes from the thunderpath.guide module
     And I have a GuideSpecification instance with a guide definition for the model
     And I have a GuideRepository instance
 

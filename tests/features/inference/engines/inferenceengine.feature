@@ -3,7 +3,7 @@ Feature: InferenceEngine Interface: Defines the base interface for inference eng
   so that I can create custom inference engines for thunderpath with a consistent API.
 
   Background:
-    Given I have imported the InferenceEngine class from the thunder.inference module
+    Given I have imported the InferenceEngine class from the thunderpath.inference module
 
   Scenario: Implement a custom inference engine with InferenceEngine interface
     Given I create a CustomInferenceEngine class that implements the InferenceEngine interface

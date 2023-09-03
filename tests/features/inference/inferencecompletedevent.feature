@@ -3,7 +3,7 @@ Feature: Raise an InferenceCompletedEvent when the inference is successfully per
   so that I can trigger other actions or notify other components of the successful completion of the inference.
 
   Background:
-    Given I have imported the InferenceCompletedEvent class from the thunder.inference module
+    Given I have imported the InferenceCompletedEvent class from the thunderpath.inference module
     And I have an instance of the chosen InferenceEngine
 
   Scenario: Raise an InferenceCompletedEvent when the inference is successfully performed

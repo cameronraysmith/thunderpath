@@ -3,7 +3,7 @@ Feature: Use the GuideSpecification Entity to define a guide (approximate poster
   so that I can perform probabilistic inference using thunderpath with my model.
 
   Background:
-    Given I have imported the GuideSpecification class from the thunder.guide module
+    Given I have imported the GuideSpecification class from the thunderpath.guide module
     And I have a model defined in a ModelSpecification instance
 
   Scenario: Define a guide using the GuideSpecification Entity

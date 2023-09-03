@@ -3,7 +3,7 @@ Feature: Configure the chosen InferenceEngine with ModelRepository and GuideRepo
   so that I can perform inference using the model and guide stored in the repositories with thunderpath.
 
   Background:
-    Given I have imported the InferenceEngine, VIEngine, and MCEngine classes from the thunder.inference module
+    Given I have imported the InferenceEngine, VIEngine, and MCEngine classes from the thunderpath.inference module
     And I have imported the ModelRepository and GuideRepository classes from the thunderpath repositories
 
   Scenario: Configure the InferenceEngine with ModelRepository and GuideRepository
