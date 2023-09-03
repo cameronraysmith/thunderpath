@@ -1,8 +1,8 @@
-site_name: pyro-thunder
+site_name: thunderpath
 site_description: Probabilistic modeling framework to define, experiment with, and critique models in service of iterating through Box's loop.
 
-repo_url: https://github.com/cameronraysmith/pyro-thunder
-repo_name: cameronraysmith/pyro-thunder
+repo_url: https://github.com/cameronraysmith/thunderpath
+repo_name: cameronraysmith/thunderpath
 
 theme:
     name: material

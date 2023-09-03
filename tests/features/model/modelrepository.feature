@@ -1,6 +1,6 @@
 Feature: Store the created model in the ModelRepository
   As a researcher, I want to store the created model in the ModelRepository
-  so that I can easily access and manage the model for probabilistic inference with Pyro-Thunder.
+  so that I can easily access and manage the model for probabilistic inference with thunderpath.
 
   Background:
     Given I have imported the ModelSpecification and ModelRepository classes from the thunder.model module

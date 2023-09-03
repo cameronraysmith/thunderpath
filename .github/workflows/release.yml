@@ -60,5 +60,5 @@ jobs:
         sleep 120 &&
         version=$(hatch -q version) &&
         pip install \
-        pyro-thunder==$version &&
+        thunderpath==$version &&
         pip list | grep thunder

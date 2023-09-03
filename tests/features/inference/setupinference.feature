@@ -1,6 +1,6 @@
 Feature: Choose between VIEngine or MCEngine for inference
   As a researcher, I want to choose between VIEngine and MCEngine for inference
-  so that I can perform inference using the most suitable engine for my problem with Pyro-Thunder.
+  so that I can perform inference using the most suitable engine for my problem with thunderpath.
 
   Background:
     Given I have imported the InferenceEngine, VIEngine, and MCEngine classes from the thunder.inference module

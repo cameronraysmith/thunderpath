@@ -1,6 +1,6 @@
 Feature: Execute the chosen InferenceEngine
   As a researcher, I want to execute the chosen InferenceEngine
-  so that I can perform inference on my model and guide using Pyro-Thunder.
+  so that I can perform inference on my model and guide using thunderpath.
 
   Background:
     Given I have imported the InferenceEngine, VIEngine, and MCEngine classes from the thunder.inference module

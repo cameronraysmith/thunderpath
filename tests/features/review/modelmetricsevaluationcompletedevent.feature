@@ -1,5 +1,5 @@
 Feature: MetricsCalculatedEvent
-    As a user of the pyro-thunder library,
+    As a user of the thunderpath library,
     I want to receive a MetricsCalculatedEvent when metrics are successfully calculated,
     So that I can take further actions or continue the application workflow.
 

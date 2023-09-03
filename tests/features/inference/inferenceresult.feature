@@ -1,6 +1,6 @@
 Feature: Store the InferenceResult Value Object containing the results of the inference
   As a researcher, I want to store the InferenceResult Value Object containing the results of the inference
-  so that I can analyze and review the results later using Pyro-Thunder.
+  so that I can analyze and review the results later using thunderpath.
 
   Background:
     Given I have imported the InferenceResult class from the thunder.inference module

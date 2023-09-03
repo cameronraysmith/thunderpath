@@ -1,6 +1,6 @@
 Feature: Implementation of the InferenceEngine for Hamiltonian Monte Carlo
   As a researcher, I want to use the MCEngine for Hamiltonian Monte Carlo
-  so that I can perform Hamiltonian Monte Carlo-based inference using Pyro-Thunder.
+  so that I can perform Hamiltonian Monte Carlo-based inference using thunderpath.
 
   Background:
     Given I have imported the InferenceEngine and MCEngine classes from the thunder.inference module

@@ -1,29 +1,29 @@
-# pyro-thunder
+# thunderpath
 
 <p align="center">
     <em>Probabilistic modeling framework to define, experiment with, and critique models in service of iterating through Box's loop.</em>
 </p>
 
-[![build](https://github.com/cameronraysmith/pyro-thunder/workflows/Build/badge.svg)](https://github.com/cameronraysmith/pyro-thunder/actions)
-[![codecov](https://codecov.io/gh/cameronraysmith/pyro-thunder/branch/main/graph/badge.svg)](https://codecov.io/gh/cameronraysmith/pyro-thunder)
-[![PyPI version](https://badge.fury.io/py/pyro-thunder.svg)](https://badge.fury.io/py/pyro-thunder)
+[![build](https://github.com/cameronraysmith/thunderpath/workflows/Build/badge.svg)](https://github.com/cameronraysmith/thunderpath/actions)
+[![codecov](https://codecov.io/gh/cameronraysmith/thunderpath/branch/main/graph/badge.svg)](https://codecov.io/gh/cameronraysmith/thunderpath)
+[![PyPI version](https://badge.fury.io/py/thunderpath.svg)](https://badge.fury.io/py/thunderpath)
 
 ---
 
-**Documentation**: <a href="https://cameronraysmith.github.io/pyro-thunder/" target="_blank">https://cameronraysmith.github.io/pyro-thunder/</a>
+**Documentation**: <a href="https://cameronraysmith.github.io/thunderpath/" target="_blank">https://cameronraysmith.github.io/thunderpath/</a>
 
-**Source Code**: <a href="https://github.com/cameronraysmith/pyro-thunder" target="_blank">https://github.com/cameronraysmith/pyro-thunder</a>
+**Source Code**: <a href="https://github.com/cameronraysmith/thunderpath" target="_blank">https://github.com/cameronraysmith/thunderpath</a>
 
 ---
 
 ## Usage
 
-[pyro-thunder](https://github.com/cameronraysmith/pyro-thunder) is pre-development. Please see the document outlining the [specification proposal](https://cameronraysmith.github.io/pyro-thunder/specification).
+[thunderpath](https://github.com/cameronraysmith/thunderpath) is pre-development. Please see the document outlining the [specification proposal](https://cameronraysmith.github.io/thunderpath/specification).
 
 ## Installation
 
 ```console
-python -m pip install "pyro-thunder @ git+https://github.com/cameronraysmith/pyro-thunder.git@main"
+python -m pip install "thunderpath @ git+https://github.com/cameronraysmith/thunderpath.git@main"
 ```
 
 ## Development

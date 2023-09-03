@@ -130,9 +130,9 @@ requires = ["hatchling", "hatch-regex-commit"]
 build-backend = "hatchling.build"
 
 [project]
-name = "pyro-thunder"
+name = "thunderpath"
 authors = [
-  { name = "pyro-thunder", email = "cameron.ray.smith@gmail.com" }
+  { name = "thunderpath", email = "cameron.ray.smith@gmail.com" }
 ]
 description = "Probabilistic modeling framework to define, experiment with, and critique models in service of iterating through Box's loop."
 readme = "README.md"
@@ -150,6 +150,6 @@ thunder = "thunder.cli:main"
 
 
 [project.urls]
-Documentation = "https://cameronraysmith.github.io/pyro-thunder/"
-Issues = "https://github.com/cameronraysmith/pyro-thunder/issues"
-Source = "https://github.com/cameronraysmith/pyro-thunder"
+Documentation = "https://cameronraysmith.github.io/thunderpath/"
+Issues = "https://github.com/cameronraysmith/thunderpath/issues"
+Source = "https://github.com/cameronraysmith/thunderpath"

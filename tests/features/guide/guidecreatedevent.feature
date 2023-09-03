@@ -1,6 +1,6 @@
 Feature: Raise a GuideCreatedEvent when the guide is successfully defined
   As a researcher, I want to raise a GuideCreatedEvent when the guide is successfully defined
-  so that I can track the progress of the Pyro-Thunder workflow and respond to the event if needed.
+  so that I can track the progress of the thunderpath workflow and respond to the event if needed.
 
   Background:
     Given I have imported the GuideSpecification, GuideRepository, and GuideCreatedEvent classes from the thunder.guide module

@@ -1,6 +1,6 @@
 Feature: Use the DataLoader Entity to load data from a specified source
   As a researcher, I want to use the DataLoader entity to load data from a specified source
-  so that I can easily prepare data for probabilistic inference with Pyro-Thunder.
+  so that I can easily prepare data for probabilistic inference with thunderpath.
 
   Background:
     Given I have imported the DataLoader class from the thunder.data module

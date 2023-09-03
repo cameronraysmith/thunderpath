@@ -1,6 +1,6 @@
 Feature: Store the created guide in the GuideRepository
   As a researcher, I want to store the created guide in the GuideRepository
-  so that I can manage and access the guide throughout the Pyro-Thunder workflow.
+  so that I can manage and access the guide throughout the thunderpath workflow.
 
   Background:
     Given I have imported the GuideSpecification, GuideRepository, and GuideCreatedEvent classes from the thunder.guide module

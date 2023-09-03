@@ -1,6 +1,6 @@
 Feature: InferenceEngine Interface: Defines the base interface for inference engines
   As a researcher, I want to use the InferenceEngine interface
-  so that I can create custom inference engines for Pyro-Thunder with a consistent API.
+  so that I can create custom inference engines for thunderpath with a consistent API.
 
   Background:
     Given I have imported the InferenceEngine class from the thunder.inference module
